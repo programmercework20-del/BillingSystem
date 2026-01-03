@@ -2,23 +2,26 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
     use HasFactory;
 
-    // Table ka naam (optional hai kyunki Laravel by default "products" samajh leta hai)
     protected $table = 'products';
 
-    // Mass assignment ke liye
+    // DB me timestamps hain
+    public $timestamps = true;
+
     protected $fillable = [
         'name',
+        'category_slug',
         'price',
-        'category_id',
-        'status',
-        'tax_percent',
+        'stock',
         'image',
+        'image_alt',
+        'reorder_point',
+        'status'
     ];
-   
 }

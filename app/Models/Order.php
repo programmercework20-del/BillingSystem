@@ -2,26 +2,33 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
     use HasFactory;
-
-    // Table ka naam (optional hai kyunki Laravel by default "orders" samajh leta hai)
-    protected $table = 'orders';
-
-    // Mass assignment ke liye
+ public $timestamps = false; 
     protected $fillable = [
-        'table_id',
         'order_number',
-        'total_amount',
-        'tax_amount',
+        'table_id',
+        'order_type',
+        'status',
+        'subtotal',
+        'tax',
         'discount',
-        'grand_total',
-        'payment_status',
-        'payment_mode',
-       
+        'total'
     ];
 
-   }
+    // 🔗 Relationship: Order belongs to Table
+    public function table()
+    {
+        return $this->belongsTo(Table::class);
+    }
+
+    // 🔗 Relationship: Order has many OrderItems
+    public function items()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
+}
