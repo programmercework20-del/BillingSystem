@@ -56,16 +56,16 @@ const OrderSummary = ({
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span className="text-muted-foreground">Subtotal</span>
-              <span className="font-medium data-text">${subtotal?.toFixed(2)}</span>
+              <span className="font-medium data-text">₹{subtotal?.toFixed(2)}</span>
             </div>
             <div className="flex justify-between text-sm">
               <span className="text-muted-foreground">Tax (8%)</span>
-              <span className="font-medium data-text">${tax?.toFixed(2)}</span>
+              <span className="font-medium data-text">₹{tax?.toFixed(2)}</span>
             </div>
             {discount > 0 && (
               <div className="flex justify-between text-sm text-success">
                 <span>Discount</span>
-                <span className="font-medium data-text">-${discount?.toFixed(2)}</span>
+                <span className="font-medium data-text">-₹{discount?.toFixed(2)}</span>
               </div>
             )}
           </div>
@@ -73,7 +73,7 @@ const OrderSummary = ({
           <div className="flex justify-between items-center pt-3 border-t border-border">
             <span className="text-lg font-heading font-semibold text-foreground">Total</span>
             <span className="text-2xl md:text-3xl font-heading font-bold text-accent data-text">
-              ${total?.toFixed(2)}
+              ₹{total?.toFixed(2)}
             </span>
           </div>
         </div>

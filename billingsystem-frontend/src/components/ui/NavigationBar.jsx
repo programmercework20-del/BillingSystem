@@ -64,7 +64,7 @@ const NavigationBar = () => {
                 <Icon name="Store" size={24} color="var(--color-accent)" />
               </div>
               <span className="text-xl font-heading font-semibold text-foreground hidden sm:block">
-                RestaurantPOS Pro
+               Test Billng System
               </span>
             </div>
 

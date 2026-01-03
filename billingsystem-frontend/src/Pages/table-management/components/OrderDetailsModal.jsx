@@ -69,7 +69,7 @@ const OrderDetailsModal = ({ isOpen, onClose, table }) => {
                     )}
                   </div>
                   <span className="text-base md:text-lg font-semibold text-foreground data-text">
-                    ${(item?.price * item?.quantity)?.toFixed(2)}
+                     ₹{(item?.price * item?.quantity)?.toFixed(2)}
                   </span>
                 </div>
               ))}
@@ -79,13 +79,13 @@ const OrderDetailsModal = ({ isOpen, onClose, table }) => {
               <div className="flex items-center justify-between text-sm md:text-base">
                 <span className="text-muted-foreground">Subtotal</span>
                 <span className="font-medium text-foreground data-text">
-                  ${subtotal?.toFixed(2)}
+                 ₹{subtotal?.toFixed(2)}
                 </span>
               </div>
               <div className="flex items-center justify-between text-sm md:text-base">
                 <span className="text-muted-foreground">Tax (8%)</span>
                 <span className="font-medium text-foreground data-text">
-                  ${tax?.toFixed(2)}
+                  ₹{tax?.toFixed(2)}
                 </span>
               </div>
               <div className="flex items-center justify-between pt-2 border-t border-border">
@@ -93,7 +93,7 @@ const OrderDetailsModal = ({ isOpen, onClose, table }) => {
                   Total
                 </span>
                 <span className="text-2xl md:text-3xl font-heading font-bold text-accent data-text">
-                  ${total?.toFixed(2)}
+                  ₹{total?.toFixed(2)}
                 </span>
               </div>
             </div>

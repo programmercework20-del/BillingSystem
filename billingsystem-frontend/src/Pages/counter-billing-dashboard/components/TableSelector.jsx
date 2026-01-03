@@ -1,32 +1,3 @@
-// import React from 'react';
-// import Select from '../../../components/ui/Select';
-
-// const TableSelector = ({ selectedTable, onTableChange, tables }) => {
-//   const tableOptions = tables?.map(table => ({
-//     value: table?.id,
-//     label: `Table ${table?.number} - ${table?.status}`,
-//     disabled: table?.status === 'Occupied'
-//   }));
-
-//   return (
-//     <Select
-//       label="Select Table (Dine-in)"
-//       placeholder="Choose a table or select takeaway"
-//       options={[
-//         { value: 'takeaway', label: 'Takeaway Order' },
-//         ...tableOptions
-//       ]}
-//       value={selectedTable}
-//       onChange={onTableChange}
-//       searchable
-//     />
-//   );
-// };
-
-// export default TableSelector;
-
-
-
 import React from 'react';
 import Select from '../../../components/ui/Select';
 
